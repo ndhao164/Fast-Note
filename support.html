@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & Help Center - FastNote</title>
+    <meta name="description" content="FastNote Customer Support, FAQs, and Troubleshooting. Learn how to use on-device voice capture, smart alarms, and manage Pro subscriptions.">
+    <link rel="icon" type="image/png" href="assets/AppIcon.png">
+    <style>
+        :root {
+            --bg-void: #09090b;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --accent-amber: #f59e0b;
+            --accent-amber-glow: rgba(245, 158, 11, 0.15);
+            --text-primary: #f4f4f5;
+            --text-secondary: #a1a1aa;
+            --text-tertiary: #71717a;
+            --radius-card: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-void);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.7;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(9, 9, 11, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-glass);
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .brand-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 9px;
+            background: linear-gradient(135deg, #18181b, #000);
+            border: 1px solid var(--border-glass);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .brand-name {
+            font-weight: 800;
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-amber);
+        }
+
+        .content-container {
+            max-width: 860px;
+            margin: 40px auto 80px;
+            padding: 0 24px;
+        }
+
+        .doc-header {
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        .doc-header h1 {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .doc-meta {
+            color: var(--accent-amber);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .support-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-card);
+            padding: 32px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            margin: 28px 0 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            margin: 20px 0 8px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        ul, ol {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            padding-left: 20px;
+            font-size: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        .highlight-box {
+            background: rgba(245, 158, 11, 0.08);
+            border-left: 3px solid var(--accent-amber);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+            color: var(--text-primary);
+            font-size: 14.5px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-glass);
+            border-radius: 14px;
+            padding: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .contact-item:hover {
+            border-color: rgba(245, 158, 11, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .contact-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .contact-desc {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent-amber);
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .contact-btn:hover {
+            text-decoration: underline;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-glass);
+            padding: 18px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+
+        footer {
+            margin-top: auto;
+            border-top: 1px solid var(--border-glass);
+            padding: 30px 24px;
+            background: rgba(9, 9, 11, 0.9);
+            font-size: 13px;
+            color: var(--text-tertiary);
+        }
+
+        .footer-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 16px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-amber);
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                gap: 12px;
+            }
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-links a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <div class="brand-logo">⚡️</div>
+                <div class="brand-name">FASTNOTE</div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="support.html" class="nav-link active">Support</a>
+                <a href="privacy.html" class="nav-link">Privacy Policy</a>
+                <a href="terms.html" class="nav-link">Terms</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="doc-header">
+            <div class="doc-meta">Help & Customer Care • FastNote 1.0</div>
+            <h1>How Can We Help You?</h1>
+            <p>Welcome to FastNote Support. FastNote is built with a 100% on-device architecture, giving you total privacy, instant offline transcription, and smart scheduled alarms.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-icon">🐙</div>
+                <div class="contact-title">GitHub Issue Tracker</div>
+                <div class="contact-desc">Report bugs, submit feature requests, or track active development tickets.</div>
+                <a href="https://github.com/ndhao164/Fast-Note/issues" class="contact-btn" target="_blank">Open an Issue →</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <div class="contact-title">Direct Email Support</div>
+                <div class="contact-desc">Need personal assistance or have a business question? Reach out directly.</div>
+                <a href="mailto:contact@fastnote.app" class="contact-btn">contact@fastnote.app →</a>
+            </div>
+        </div>
+
+        <div class="support-card">
+            <h2>🎙️ Voice Capture & Transcription FAQ</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Why does FastNote need Microphone & Speech Recognition permissions?</div>
+                <p class="faq-answer">FastNote uses your microphone to record voice memos and the on-device Apple Speech framework / Whisper CoreML to convert your voice into text. Audio is processed directly on your device's Apple Neural Engine and is never uploaded to remote servers.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Does FastNote work without an active internet connection?</div>
+                <p class="faq-answer">Yes, 100%. FastNote runs speech recognition, natural language date extraction, and checklist generation completely offline directly on your hardware.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does smart date and alarm extraction work?</div>
+                <p class="faq-answer">When you speak or type phrases like <em>"Remind me at 3 PM today"</em>, <em>"Wake me up in 20 minutes"</em>, or <em>"Product sync tomorrow morning"</em>, FastNote's built-in Temporal NLU automatically schedules an interactive alert at the intended time.</p>
+            </div>
+        </div>
+
+        <div class="support-card">
+            <h2>💳 FastNote Pro & In-App Purchases</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I restore my existing subscription or lifetime purchase?</div>
+                <p class="faq-answer">Open FastNote → Tap the <strong>Gear icon</strong> (Settings) or open the Pro Paywall → Tap <strong>"Restore Purchases"</strong>. FastNote will automatically query Apple's StoreKit 2 servers and restore your active entitlement immediately without any extra charge.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I cancel my subscription?</div>
+                <p class="faq-answer">All subscriptions are managed directly by Apple. To cancel or change your plan:
+                <br>1. Open your iPhone or iPad <strong>Settings</strong> app.
+                <br>2. Tap your <strong>Apple ID profile (Name)</strong> at the top.
+                <br>3. Tap <strong>Subscriptions</strong>.
+                <br>4. Select <strong>FastNote</strong> and tap <strong>Cancel Subscription</strong>.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does the 7-Day Free Trial work?</div>
+                <p class="faq-answer">New users are eligible for a 7-day free trial on the FastNote Pro Annual plan. You can cancel at any time up to 24 hours before the trial ends without being charged.</p>
+            </div>
+        </div>
+
+        <div class="support-card">
+            <h2>🛡️ Data Privacy, Backup & Storage</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Where are my notes and audio files stored?</div>
+                <p class="faq-answer">All your notes, checklists, and audio recordings are saved locally inside FastNote's sandboxed SwiftData storage on your physical device. We do not have any database or cloud servers storing your personal data.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I delete all my data?</div>
+                <p class="faq-answer">You can delete individual notes by swiping left on any note card. To reset everything, navigate to <strong>Settings</strong> → <strong>"Delete All Data"</strong>, or simply delete the FastNote app from your device.</p>
+            </div>
+        </div>
+
+        <div class="support-card">
+            <h2>📱 System Requirements</h2>
+            <div class="highlight-box">
+                ⚡ <strong>iOS / iPadOS 18.0 or later</strong> required. Compatible with iPhone and 13-inch / 11-inch iPad displays. Apple Intelligence and Neural Engine hardware acceleration are supported.
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>© 2026 FastNote. Complete privacy, zero external tracking.</div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="https://github.com/ndhao164/Fast-Note" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
