@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - FastNote</title>
+    <meta name="description" content="FastNote Terms of Service and End User License Agreement (EULA).">
+    <link rel="icon" type="image/png" href="assets/AppIcon.png">
+    <style>
+        :root {
+            --bg-void: #09090b;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --accent-amber: #f59e0b;
+            --accent-amber-glow: rgba(245, 158, 11, 0.15);
+            --text-primary: #f4f4f5;
+            --text-secondary: #a1a1aa;
+            --text-tertiary: #71717a;
+            --radius-card: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-void);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.7;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(9, 9, 11, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-glass);
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .brand-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 9px;
+            background: linear-gradient(135deg, #18181b, #000);
+            border: 1px solid var(--border-glass);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .brand-name {
+            font-weight: 800;
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-amber);
+        }
+
+        .content-container {
+            max-width: 860px;
+            margin: 40px auto 80px;
+            padding: 0 24px;
+        }
+
+        .doc-header {
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        .doc-header h1 {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .doc-meta {
+            color: var(--accent-amber);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .policy-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-card);
+            padding: 36px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-top: 32px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p, ul {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        .highlight-box {
+            background: var(--accent-amber-glow);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 20px 0;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        footer {
+            margin-top: auto;
+            border-top: 1px solid var(--border-glass);
+            background: rgba(9, 9, 11, 0.6);
+            padding: 30px 24px;
+        }
+
+        .footer-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 13px;
+            color: var(--text-tertiary);
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 16px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-amber);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <div class="brand-logo">⚡️</div>
+                <div class="brand-name">FASTNOTE</div>
+            </a>
+            <nav class="nav-links">
+                <a href="privacy.html" class="nav-link">Privacy Policy</a>
+                <a href="terms.html" class="nav-link active">Terms of Service</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="doc-header">
+            <div class="doc-meta">App Store Guideline 3.1.2 Compliant • Effective Date: September 13, 2026</div>
+            <h1>Terms of Service & EULA</h1>
+            <p>Please read these Terms of Service ("Terms") and End User License Agreement carefully before using FastNote. By downloading, installing, or using the app, you agree to be bound by these Terms.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2>1. Agreement to Terms</h2>
+            <p>These Terms govern your use of the FastNote mobile application for iOS. If you do not agree to these Terms, do not install or use FastNote. FastNote also adheres to the standard Apple End User License Agreement (<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: var(--accent-amber); text-decoration: none;">Apple Standard EULA</a>).</p>
+
+            <h2>2. License Grant</h2>
+            <p>FastNote grants you a non-exclusive, non-transferable, revocable license to use the app on any Apple-branded devices that you own or control, in accordance with the Usage Rules set forth in the Apple Media Services Terms and Conditions.</p>
+
+            <h2>3. FastNote Pro Subscriptions & In-App Purchases</h2>
+            <div class="highlight-box">
+                💳 <strong>Billing & Auto-Renewal:</strong> Payment will be charged to your Apple ID Account at confirmation of purchase. Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current billing cycle.
+            </div>
+            <ul>
+                <li><strong>FastNote Pro Yearly:</strong> Billed annually (includes a 7-day free trial where indicated). Your account will be charged for renewal within 24 hours prior to the end of the current period at the then-current annual rate.</li>
+                <li><strong>FastNote Pro Monthly:</strong> Billed monthly on a recurring basis. Cancel anytime.</li>
+                <li><strong>FastNote Pro Lifetime:</strong> A one-time, non-consumable purchase granting permanent access to all FastNote Pro features with no recurring charges.</li>
+                <li><strong>Free Trial:</strong> Any unused portion of a free trial period will be forfeited when you purchase a subscription.</li>
+                <li><strong>Managing Subscriptions:</strong> You can manage or cancel your subscriptions at any time in your device's <strong>Settings > Apple ID > Subscriptions</strong>.</li>
+                <li><strong>Restoring Purchases:</strong> If you reinstall FastNote or switch devices, tap "Restore Purchases" in the app to restore your active tier without paying again.</li>
+            </ul>
+
+            <h2>4. Free Tier & Daily Quota</h2>
+            <p>Free users are granted 5 on-device AI voice transcriptions per day. Once the daily quota is reached, you may upgrade to FastNote Pro for unlimited voice captures or wait until your quota refreshes the following day.</p>
+
+            <h2>5. User Content & On-Device Storage</h2>
+            <p>You retain full ownership of all notes, audio recordings, and checklists created within FastNote. Because all data is stored locally on your device, you are solely responsible for maintaining backups through Apple's iCloud or device backup features. FastNote does not maintain copies of your data on remote servers.</p>
+
+            <h2>6. Disclaimer of Warranties</h2>
+            <p>FastNote is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express or implied. While FastNote employs state-of-the-art on-device CoreML and speech models, we do not guarantee that speech transcription or temporal parsing will be 100% error-free in all acoustic environments.</p>
+
+            <h2>7. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by applicable law, in no event shall FastNote or its developers be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the application.</p>
+
+            <h2>8. Contact Information</h2>
+            <p>If you have any questions or feedback regarding these Terms, please contact us via our GitHub project:</p>
+            <ul>
+                <li>GitHub: <a href="https://github.com/ndhao164/Fast-Note" target="_blank" style="color: var(--accent-amber); text-decoration: none;">https://github.com/ndhao164/Fast-Note</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>© 2026 FastNote. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
